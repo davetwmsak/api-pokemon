@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Pokemon.css';
+import CarouselPagination from './CarouselPagination';
 
 const Pokemon = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -28,7 +29,7 @@ const Pokemon = () => {
         setPokemons(allPokemonResponses.map(response => response.data));
       } catch (error) {
         console.error('Error fetching data:', error);
-        setError('No se pudieron cargar los Pokémon. Inténtalo de nuevo más tarde.');
+        setError('');
       }
     };
 
@@ -44,7 +45,7 @@ const Pokemon = () => {
   const handleSearchNumber = (e) => {
     setSearchNumber(e.target.value);
     setSearchName('');
-    setCurrentPage(1); 
+    setCurrentPage(1);
   };
 
   const traducirHabilidad = (habilidad) => {
@@ -112,6 +113,8 @@ const Pokemon = () => {
   const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
   const currentPokemons = filteredPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
+  const totalPages = Math.ceil(filteredPokemons.length / pokemonsPerPage);
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
@@ -147,13 +150,7 @@ const Pokemon = () => {
           </div>
         ))}
       </div>
-      <div className="pagination">
-        {Array.from({ length: Math.ceil(filteredPokemons.length / pokemonsPerPage) }, (_, index) => (
-          <button key={index} onClick={() => paginate(index + 1)}>
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      <CarouselPagination totalPages={totalPages} currentPage={currentPage} paginate={paginate} />
     </div>
   );
 };

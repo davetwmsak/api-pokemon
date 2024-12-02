@@ -1,0 +1,52 @@
+.carousel-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .carousel-pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-pagination button:hover {
+    background-color: #0056b3;
+  }
+  
+  .carousel-pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .page-numbers {
+    display: flex;
+    overflow-x: auto;
+    max-width: 400px;
+    margin-top: 16px;   
+  }
+  
+  .page-numbers button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .page-numbers button:hover {
+    background-color: #0056b3;
+  }
+  
+  .page-numbers .active {
+    background-color: #0056b3;
+  }  
