@@ -1,9 +1,10 @@
+@import "../../../api-pokemon/mi-proyecto/sass/variables.scss";
 #root {
-  max-width: 1280px;
+  max-width: $sizeTypeAll1280;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(to right, #0b3643, rgb(41, 52, 36));
+  background: linear-gradient(to right, $colorBlueDarkBackground, $colorGreenBackground);
 }
 
 .logo {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './CarouselPagination.css';
+import '../css/CarouselPagination.css';
 
 const CarouselPagination = ({ totalPages, currentPage, paginate }) => {
   const pageNumbers = [];

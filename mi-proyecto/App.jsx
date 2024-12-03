@@ -1,6 +1,6 @@
 import React from 'react';
 import Pokemon from './Pokemon';
-import './App.css';
+import '../mi-proyecto/css/App.css';
 
 const App = () => {
   return (

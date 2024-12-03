@@ -1,3 +1,4 @@
+@import "../../../api-pokemon/mi-proyecto/sass/variables.scss";
 .pokemon-card {
   border: 1px solid #c7b019;
   border-radius: 10px;
@@ -14,7 +15,6 @@
 .pokemon-card:hover {
   transform: scale(1.05);
 }
-
 .pokemon-card img {
   width: 150px;
   height: 150px;

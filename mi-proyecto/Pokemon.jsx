@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Pokemon.css';
-import CarouselPagination from './CarouselPagination';
+import '../mi-proyecto/css/Pokemon.css';
+import CarouselPagination from './src/CarouselPagination';
 
 const Pokemon = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -9,7 +9,7 @@ const Pokemon = () => {
   const [searchNumber, setSearchNumber] = useState('');
   const [error, setError] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const pokemonsPerPage = 12;
+  const pokemonsPerPage = 9;
 
   useEffect(() => {
     const fetchPokemons = async () => {
