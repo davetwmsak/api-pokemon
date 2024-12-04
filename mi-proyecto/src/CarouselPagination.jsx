@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/CarouselPagination.css';
+import sass from'../css/CarouselPaginationDesign.module.scss';
 
 const CarouselPagination = ({ totalPages, currentPage, paginate }) => {
   const pageNumbers = [];
@@ -8,14 +8,14 @@ const CarouselPagination = ({ totalPages, currentPage, paginate }) => {
   }
 
   return (
-    <div className="carousel-pagination">
+    <div className={sass.carousel_pagination}>
       <button onClick={() => paginate(1)} disabled={currentPage === 1}>&laquo;</button>
       <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>&lt;</button>
-      <div className="page-numbers">
+      <div className={sass.page_numbers}>
         {pageNumbers.map(number => (
           <button
             key={number}
-            className={currentPage === number ? 'active' : ''}
+            className={sass.currentPage === number ? 'active' : ''}
             onClick={() => paginate(number)}
           >
             {number}

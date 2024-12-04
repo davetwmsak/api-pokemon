@@ -1,90 +1,91 @@
-@import "../../../api-pokemon/mi-proyecto/sass/variables.scss";
-.pokemon-card {
-  border: 1px solid #c7b019;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
-  max-width: 300px;
-  box-shadow: 4px 4px 22px #fccc04;
-  transition: transform 0.3s;
-  flex: 1 1 calc(33.333% - 20px);
-  box-sizing: border-box;
-  position: relative;
+@use "../../../api-pokemon/mi-proyecto/sass/variables.scss" as sass;
+.pokemon_card {
+  border: sass.$sizeTypeAll1 sass.$colorYellowCRD;
+  border-radius: sass.$sizeTypeAll10;
+  padding: sass.$sizeTypeAll20;
+  margin: sass.$sizeTypeAll20;
+  max-width: sass.$sizeTypeAll300;
+  box-shadow: sass.$sizeTypeAll5 sass.$sizeTypeAll5 sass.$sizeTypeAll22 sass.$colorYellowBXSH;
+  transition: sass.$transform03;
+  flex: sass.$OneOneCalc;
+  box-sizing: sass.$borderbox;
+  position: sass.$positionRelative;
 }
 
-.pokemon-card:hover {
-  transform: scale(1.05);
+.pokemon_card:hover {
+  transform: sass.$scale10;
 }
-.pokemon-card img {
-  width: 150px;
-  height: 150px;
-}
-
-.pokemon-card h1 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  text-transform: capitalize;
+.pokemon_card img {
+  width: sass.$sizeTypeAll150;
+  height: sass.$sizeTypeAll150;
 }
 
-.pokemon-card p {
-  margin: 5px 0;
+.pokemon_card h1 {
+  font-size: sass.$fontSize108;
+  margin-bottom: sass.$sizeTypeAll10;
+  text-transform: sass.$letterCapitalize;
+  
 }
 
-.pokemon-id {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #889fa6;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
+.pokemon_card p   {
+  margin: sass.$margin5;
 }
 
-.pokemon-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.pokemon_id {
+  position: sass.$positionAbsolute;
+  top: sass.$sizeTypeAll10;
+  left: sass.$sizeTypeAll10;
+  background-color: sass.$colorLightBlueBackground;
+  padding: sass.$sizeTypeAll5 sass.$sizeTypeAll10;
+  border-radius: sass.$sizeTypeAll5;
+  font-weight: sass.$letterBold;
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+.pokemon_list {
+  display: sass.$displayFlex;
+  flex-wrap: sass.$wrap;
+  justify-content: sass.$positionCenter;
 }
 
-.search-input {
-  margin: 0 10px;
-  padding: 10px;
-  border: 1px solid #427873;
-  border-radius: 5px;
-  font-size: 1em;
-  width: 200px;
-  transition: box-shadow 0.3s;
-  border-radius: 18px;
+.search_container {
+  display: sass.$displayFlex;
+  justify-content: sass.$positionCenter;
+  margin-bottom: sass.$sizeTypeAll20;
+}
+
+.search_input {
+  margin: sass.$margin010;
+  padding: sass.$sizeTypeAll10;
+  border: sass.$sizeTypeAll1 sass.$colorSearch;
+  border-radius: sass.$sizeTypeAll5;
+  font-size: sass.$fontSize1;
+  width: sass.$sizeTypeAll200;
+  transition: box-shadow sass.$transform03;
+  border-radius: sass.$sizeTypeAll18;
   &:hover{
-    background-color: transparent;
-    color: white;
-    border-top: 0px solid #427873;
-    transition: 0.3s all ease-in-out;
-    box-shadow: 0px 2px 20px 10px #9ae0ba;
+    background-color: sass.$colorTransparentBackground;
+    color: sass.$colorWhite;
+    border-top: sass.$sizeTypeAll0 sass.$colorSearch;
+    transition: sass.$trasitionConf1;
+    box-shadow: sass.$sizeTypeAll0 sass.$sizeTypeAll2 sass.$sizeTypeAll20 sass.$sizeTypeAll10 sass.$colorSearch2;
 }
 }
 
 .pagination {
-  justify-content:center;
-  margin-top: 25px;
+  justify-content: sass.$positionCenter;
+  margin-top: sass.$sizeTypeAll25;
 }
 
 .pagination button {
-  margin: 10px;
-  padding: 6px 12px;
-  border: none;
-  background-color: #375654;
-  color: white;
-  border-radius: 90px;
-  cursor: pointer;
+  margin: sass.$sizeTypeAll10;
+  padding: sass.$sizeTypeAll6 sass.$sizeTypeAll12 ;
+  border: sass.$borderNone;
+  background-color: sass.$colorGreenBlueBackground;
+  color: sass.$colorWhite;
+  border-radius: sass.$sizeTypeAll90;
+  cursor: sass.$cursorPointer;
 }
 
 .pagination button:hover {
-  background-color: #427873;
+  background-color: sass.$colorSearch;
 }

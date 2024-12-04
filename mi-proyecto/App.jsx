@@ -1,10 +1,10 @@
 import React from 'react';
 import Pokemon from './Pokemon';
-import '../mi-proyecto/css/App.css';
+import sass from'../mi-proyecto/css/AppDesign.module.scss';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={sass.App}>
       <h1>Pokémon API</h1>
       <Pokemon />
     </div>

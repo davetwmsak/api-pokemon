@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../mi-proyecto/css/Pokemon.css';
+import sass from '../mi-proyecto/css/PokemonDesign.module.scss';
 import CarouselPagination from './src/CarouselPagination';
 
 const Pokemon = () => {
@@ -119,13 +119,13 @@ const Pokemon = () => {
 
   return (
     <div>
-      <div className="search-container">
+      <div className={sass.search_container}>
         <input 
           type="text" 
           value={searchName} 
           onChange={handleSearchName} 
           placeholder="Buscar por nombre" 
-          className="search-input"
+          className={sass.search_input}
         />
         <input 
           type="number" 
@@ -133,14 +133,14 @@ const Pokemon = () => {
           onChange={handleSearchNumber} 
           placeholder="Buscar por número" 
           min="1" 
-          className="search-input"
+          className={sass.search_input}
         />
       </div>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <div className="pokemon-list">
+      <div className={sass.pokemon_list}>
         {currentPokemons.map(pokemon => (
-          <div className="pokemon-card" key={pokemon.id}>
-            <span className="pokemon-id">{pokemon.id}</span>
+          <div className={sass.pokemon_card} key={pokemon.id}>
+            <span className={sass.pokemon_id}>{pokemon.id}</span>
             <h1>{pokemon.name}</h1>
             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
             <p>Altura: {pokemon.height * 10} cm</p>

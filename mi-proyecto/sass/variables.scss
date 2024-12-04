@@ -1,34 +1,38 @@
-//variables generales para todo el proyecto
-/*******
-Para poner dos atributos a una clase CSS
-    {`${fasdatec.sidebar__parr} ${fasdatec.sidebar__weight}`}
-Para poner un atributo a una clase CSS
-    {fasdatec.sidebar__parr}
-Para poder hacer calculos de variables, es decir:
-    Obtener 5rem = 
-        gap: $sixeLarge + $sizeMediumLarge;
-    O Simplemente hacer
-        gap: $sixeLarge + 2rem;
-*********/
-//variables para colores de fondo o color normal
 $colorBlueDarkBackground:  #0b3643;
 $colorGreenBackground: #293424;
 $colorWhiteBackground: #fff;
+$colorLightBlueBackground: #889fa6;
+$colorTransparentBackground: transparent;
+$colorGreenBlueBackground: #375654;
+$colorScheme: light dark;
+$colorBackgroundScrollBar: #293424;
 :export {
     colorBlueDarkBackground: $colorBlueDarkBackground;
     colorYellowBackground: $colorGreenBackground;
     colorWhiteBackground: $colorWhiteBackground;
+    colorLightBlueBackground: $colorLightBlueBackground;
+    colorTransparentBackground: $colorTransparentBackground;
+    colorGreenBlueBackground: $colorGreenBlueBackground;
+    colorScheme: $colorScheme;
+    colorBackgroundScrollBar: $colorBackgroundScrollBar;
+
 }
 //variables para colores de tag tipo <a><li><p><strong><span><h1><h2>...
 $colorWhite: #fff;
 $colorBlueDark: #2f2e41;
-$colorYellow: #ffb727;
+$colorYellowBXSH: #fccc04;
+$colorYellowCRD: #c7b019;
 $colorBlack: #000;
+$colorSearch: solid #427873;
+$colorSearch2: #9ae0ba;
 :export {
     colorWhite: $colorWhite;
     colorBlueDark: $colorBlueDark;
-    colorYellow: $colorYellow;
+    colorYellowBXSH: $colorYellowBXSH;
+    colorYellowCRD: $colorYellowCRD;
     colorBlack: $colorBlack;
+    colorSearch: $colorSearch;
+    colorSearch2: $colorSearch2;
 } 
 //variables para el tamaño de cualquier letras
 $sizeLittle: 0.6rem; //12.8px
@@ -66,8 +70,24 @@ $sizeLarge: 3rem; //48px
 //variables para cualquier tipo de tamaño
 //px
 $sizeTypeAll0: 0px;
+$sizeTypeAll1: 1px;
+$sizeTypeAll2: 2px;
+$sizeTypeAll3: 3px;
+$sizeTypeAll4: 4px;
+$sizeTypeAll5: 5px;
+$sizeTypeAll6: 6px;
+$sizeTypeAll7: 7px;
+$sizeTypeAll8: 8px;
+$sizeTypeAll9: 9px;
+$sizeTypeAll10: 10px;
+$sizeTypeAll12: 12px;
+$sizeTypeAll18: 18px;
 $sizeTypeAll20: 20px;
+$sizeTypeAll22: 22px;
+$sizeTypeAll25: 25px;
+$sizeTypeAll90: 90px;
 $sizeTypeAll100: 100px;
+$sizeTypeAll150: 150px;
 $sizeTypeAll200: 200px;
 $sizeTypeAll300: 300px;
 $sizeTypeAll400: 400px;
@@ -81,10 +101,12 @@ $sizeTypeAll1280: 1280px;
 $sizeTypePercentage0: 0%;
 $sizeTypePercentage5: 5%;
 $sizeTypePercentage10: 10%;
+$sizeTypePercentage12: 12%;
 $sizeTypePercentage15: 15%;
 $sizeTypePercentage20: 20%;
 $sizeTypePercentage25: 25%;
 $sizeTypePercentage30: 30%;
+$sizeTypePercentage33: 33.333%;
 $sizeTypePercentage35: 35%;
 $sizeTypePercentage40: 40%;
 $sizeTypePercentage45: 45%;
@@ -119,8 +141,23 @@ $sizeTypeRem4:5rem;
 $sizeTypeRem5:4rem;
 :export{
     sizeTypeAll0: $sizeTypeAll0;
+    sizeTypeAll1: $sizeTypeAll1;
+    sizeTypeAll2: $sizeTypeAll2;
+    sizeTypeAll3: $sizeTypeAll3;
+    sizeTypeAll4: $sizeTypeAll4;
+    sizeTypeAll5: $sizeTypeAll5;
+    sizeTypeAll6: $sizeTypeAll6;
+    sizeTypeAll7: $sizeTypeAll7;
+    sizeTypeAll8: $sizeTypeAll8;
+    sizeTypeAll9: $sizeTypeAll9;
+    sizeTypeAll10: $sizeTypeAll0;
+    sizeTypeAll18: $sizeTypeAll18;
     sizeTypeAll20: $sizeTypeAll20;
+    sizeTypeAll22: $sizeTypeAll22;
+    sizeTypeAll25: $sizeTypeAll25;
+    sizeTypeAll90: $sizeTypeAll90;
     sizeTypeAll100: $sizeTypeAll100;
+    sizeTypeAll150: $sizeTypeAll150;
     sizeTypeAll200: $sizeTypeAll200;
     sizeTypeAll300: $sizeTypeAll300;
     sizeTypeAll400: $sizeTypeAll400;
@@ -136,6 +173,7 @@ $sizeTypeRem5:4rem;
     sizeTypePercentage20: $sizeTypePercentage20;
     sizeTypePercentage25: $sizeTypePercentage25;
     sizeTypePercentage30: $sizeTypePercentage30;
+    sizeTypePercentage33: $sizeTypePercentage33;
     sizeTypePercentage35: $sizeTypePercentage35;
     sizeTypePercentage40: $sizeTypePercentage40;
     sizeTypePercentage45: $sizeTypePercentage45;
@@ -271,4 +309,71 @@ $sizeZindex6:100;
     sizeZindex4: $sizeZindex4;
     sizeZindex5: $sizeZindex5;
     sizeZindex6: $sizeZindex6;
+}
+// transition transform
+$transform03: 0.3s;
+$trasitionConf1:0.2s all ease-in-out;
+:export {
+    transform03: $transform03;
+    transitionConf1: $trasitionConf1;
+}
+// variable border-box
+$borderbox: border-box;
+:export {
+    borderbox: $borderbox;
+}
+// Posiciones
+$OneOneCalc: 1 1 calc(33.333% - 20px);
+$wrap: wrap;
+$positionRelative: relative;
+$positionAbsolute: absolute;
+$positionCenter: center;
+:export {
+    OneOneCalc: $OneOneCalc;
+    wrap: $wrap;
+    positionRelative: $positionRelative;
+    positionAbsolute: $positionAbsolute;
+    positionCenter: $positionCenter;
+}
+//escalas
+$scale10: scale(1.10);
+:export {
+    scale10: $scale10;
+}
+// em
+$fontSize108: 1.8em;
+$fontSize1: 1em;
+$fontSize302: 3.2em;
+:export {
+    fontSize105: $fontSize108;
+    fontSize1: $fontSize1;
+    fontSize302: $fontSize302;
+}
+//letras
+$letterCapitalize: capitalize;
+$letterBold: bold;
+$letterFamily: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+:export {
+    letterCapitalize: $letterCapitalize;
+    letterBold: $letterBold;
+    letterFamily: $letterFamily;
+}
+//margin variables
+$margin5: 5px 0;
+$margin010: 0 10px;
+:export {
+    margin5: $margin5;
+    margin010: $margin010;
+}
+//display
+$displayFlex: flex;
+$borderNone: none;
+:export {
+    displayFlex: $displayFlex;
+    borderNone: $borderNone;
+}
+//cursores
+$cursorPointer: pointer;
+:export {
+    cursorPointer: $cursorPointer;
 }

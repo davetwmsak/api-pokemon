@@ -1,12 +1,12 @@
-@import "../../../api-pokemon/mi-proyecto/sass/variables.scss";
-.carousel-pagination {
+@use "../../../api-pokemon/mi-proyecto/sass/variables.scss" as sass;
+.carousel_pagination {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
   }
   
-  .carousel-pagination button {
+  .carousel_pagination button {
     margin: 0 5px;
     padding: 10px 15px;
     border: none;
@@ -17,23 +17,23 @@
     transition: background-color 0.3s;
   }
   
-  .carousel-pagination button:hover {
+  .carousel_pagination button:hover {
     background-color: #0056b3;
   }
   
-  .carousel-pagination button:disabled {
+  .carousel_pagination button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
   
-  .page-numbers {
+  .page_numbers {
     display: flex;
     overflow-x: auto;
     max-width: 400px;
     margin-top: 16px;   
   }
   
-  .page-numbers button {
+  .page_numbers button {
     margin: 0 5px;
     padding: 10px 15px;
     border: none;
@@ -44,10 +44,10 @@
     transition: background-color 0.3s;
   }
   
-  .page-numbers button:hover {
+  .page_numbers button:hover {
     background-color: #0056b3;
   }
   
-  .page-numbers .active {
+  .page_numbers .active {
     background-color: #0056b3;
   }  
